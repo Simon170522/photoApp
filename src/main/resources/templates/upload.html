@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload Photo</title>
+</head>
+<body>
+<h1>Upload Photo</h1>
+<form method="POST" enctype="multipart/form-data" th:action="@{/upload}">
+    <input type="file" name="file" />
+    <button type="submit">Upload</button>
+</form>
+<p th:text="${message}"></p>
+<a href="/">See all photos</a>
+</body>
+</html>

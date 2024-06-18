@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>PhotoApp</title>
+</head>
+<body>
+<h1>Uploaded Photos</h1>
+<ul>
+    <li th:each="photo : ${photos}">
+        <img th:src="@{'/uploaded/' + ${photo}}" th:alt="${photo}" width="100">
+        <span th:text="${photo}"></span>
+    </li>
+</ul>
+<a href="/upload">Upload New Photo</a>
+</body>
+</html>
